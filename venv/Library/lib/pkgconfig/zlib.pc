@@ -1,0 +1,13 @@
+prefix=D:/Insurance Premium Prediction/venv/Library
+exec_prefix=D:/Insurance Premium Prediction/venv/Library
+libdir=D:/Insurance Premium Prediction/venv/Library/lib
+sharedlibdir=D:/Insurance Premium Prediction/venv/Library/lib
+includedir=D:/Insurance Premium Prediction/venv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

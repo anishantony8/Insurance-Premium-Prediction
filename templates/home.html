@@ -1,0 +1,124 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Insurance Premium Prediction </h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Insurance Premium Performance Prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Diabetes</label>
+            <select class="form-control" name="Diabetes" placeholder="Enter you option" required>
+                <option class="placeholder" selected disabled value="">Select your option</option>
+                <option value="Yes">
+                    0
+                </option>
+                <option value="No">
+                    1
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">BloodPressureProblems</label>
+            <select class="form-control" name="Blood Pressure Problems" placeholder="Enter you option" required>
+                <option class="placeholder" selected disabled value="">Select your option</option>
+                <option value="Yes">
+                    0
+                </option>
+                <option value="No">
+                    1
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">AnyTransplants</label>
+            <select class="form-control" name="Any Transplants" placeholder="Enter you option" required>
+                <option class="placeholder" selected disabled value="">Select your option</option>
+                <option value="Yes">
+                    0
+                </option>
+                <option value="No">
+                    1
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">AnyChronicDiseases</label>
+            <select class="form-control" name="Any Chronic Diseases" placeholder="Enter you option" required>
+                <option class="placeholder" selected disabled value="">Select your option</option>
+                <option value="Yes">
+                    0
+                </option>
+                <option value="No">
+                    1
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">KnownAllergies</label>
+            <select class="form-control" name="Known Allergies" placeholder="Enter you option" required>
+                <option class="placeholder" selected disabled value="">Select your option</option>
+                <option value="Yes">
+                    0
+                </option>
+                <option value="No">
+                    1
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">HistoryOfCancerInFamily</label>
+            <select class="form-control" name="History Of CancerInFamily" placeholder="Enter you option" required>
+                <option class="placeholder" selected disabled value="">Select your option</option>
+                <option value="Yes">
+                    0
+                </option>
+                <option value="No">
+                    1
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">NumberOfMajorSurgeries</label>
+            <select class="form-control" name="NumberOfMajorSurgeries" placeholder="Enter you option" required>
+                <option class="placeholder" selected disabled value="">Select your option</option>
+                <option value="0">
+                    0
+                </option>
+                <option value="1">
+                    1
+                </option>
+                <option value="2">
+                    2
+                </option>
+                <option value="3">
+                    3
+                </option>
+            </select>
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input class="form-control" type="number" name="reading_score"
+                placeholder="Enter your Reading score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Height</label>
+            <input class="form-control" type="number" name="writing_score"
+                placeholder="Enter your Reading Score" min='0' max='1000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Weight</label>
+            <input class="form-control" type="number" name="writing_score"
+                placeholder="Enter your Reading Score" min='0' max='1000' />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Insurance Premium " required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
